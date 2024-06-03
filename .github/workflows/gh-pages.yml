@@ -34,7 +34,6 @@ jobs:
 
       - name: Build WASM
         run: |
-          cd rust-wasm_game_of_life
           export PATH="$HOME/.cargo/bin:$PATH"
           rm -rf pkg www/pkg
           wasm-pack build --target web
