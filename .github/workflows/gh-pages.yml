@@ -24,11 +24,11 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: www
+        working-directory: www/pkg
 
       - name: Build
         run: npm run build
-        working-directory: www
+        working-directory: www/pkg
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
