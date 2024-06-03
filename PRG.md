@@ -14,7 +14,7 @@ This file is used to connect this repository to the **PRG** project categorizati
 
 **Repository Tier:** Bronze <br>
 **Technology:** Rust, WebAssembly <br>
-**Category:** Web Game <br>
+**Category:** Web Game, GitHub Actions, GitHub Pages <br>
 **Order:** 49 <br>
 
 ## Parameters

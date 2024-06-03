@@ -1,7 +1,7 @@
 <!-- Begin README -->
 
 <div align="center">
-    <a href="https://github.com/scottgriv/rust-wasm_game_of_life" target="_blank">
+    <a href="https://scottgriv.github.io/rust-wasm_game_of_life/" target="_blank">
         <img src="./docs/images/cgol.gif" width="200" height="200"/>
     </a>
 </div>
@@ -13,6 +13,7 @@
     <a href="mailto:scott.grivner@gmail.com"><img src="https://img.shields.io/badge/gmail-contact_me-EA4335?style=for-the-badge&logo=gmail" alt="Email Badge" /></a>
     <a href="https://www.buymeacoffee.com/scottgriv"><img src="https://img.shields.io/badge/buy_me_a_coffee-support_me-FFDD00?style=for-the-badge&logo=buymeacoffee&color=FFDD00" alt="BuyMeACoffee Badge" /></a>
     <br>
+     <a href="https://github.com/scottgriv/Palm-Tree/actions/workflows/pages/pages-build-deployment" target="_blank"><img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/scottgriv/Palm-Tree/pages%2Fpages-build-deployment?style=for-the-badge&logo=github&label=GitHub%20Pages"></a>
     <a href="https://prgportfolio.com" target="_blank"><img src="https://img.shields.io/badge/PRG-Bronze Project-CD7F32?style=for-the-badge&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMjYuMDAwMDAwcHQiIGhlaWdodD0iMzQuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAyNi4wMDAwMDAgMzQuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwzNC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNDRDdGMzIiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xMiAzMjggYy04IC04IC0xMiAtNTEgLTEyIC0xMzUgMCAtMTA5IDIgLTEyNSAxOSAtMTQwIDQyIC0zOCA0OAotNDIgNTkgLTMxIDcgNyAxNyA2IDMxIC0xIDEzIC03IDIxIC04IDIxIC0yIDAgNiAyOCAxMSA2MyAxMyBsNjIgMyAwIDE1MCAwCjE1MCAtMTE1IDMgYy04MSAyIC0xMTkgLTEgLTEyOCAtMTB6IG0xMDIgLTc0IGMtNiAtMzMgLTUgLTM2IDE3IC0zMiAxOCAyIDIzCjggMjEgMjUgLTMgMjQgMTUgNDAgMzAgMjUgMTQgLTE0IC0xNyAtNTkgLTQ4IC02NiAtMjAgLTUgLTIzIC0xMSAtMTggLTMyIDYKLTIxIDMgLTI1IC0xMSAtMjIgLTE2IDIgLTE4IDEzIC0xOCA2NiAxIDc3IDAgNzIgMTggNzIgMTMgMCAxNSAtNyA5IC0zNnoKbTExNiAtMTY5IGMwIC0yMyAtMyAtMjUgLTQ5IC0yNSAtNDAgMCAtNTAgMyAtNTQgMjAgLTMgMTQgLTE0IDIwIC0zMiAyMCAtMTgKMCAtMjkgLTYgLTMyIC0yMCAtNyAtMjUgLTIzIC0yNiAtMjMgLTIgMCAyOSA4IDMyIDEwMiAzMiA4NyAwIDg4IDAgODggLTI1eiIvPgo8L2c+Cjwvc3ZnPgo=" alt="Bronze" /></a>
 </p>
 
@@ -20,7 +21,7 @@
 
 <h1 align="center">Conway's Game of Life</h1>
 <div align="center">
-    <a href="https://bun.sh/" target="_blank">
+    <a href="https://scottgriv.github.io/rust-wasm_game_of_life/" target="_blank">
         <img src="./docs/images/banner.png" style="width: 50%;"/>
     </a>
     <br>
@@ -32,6 +33,8 @@ A web-based implementation of **Conway's Game of Life** using `Rust` and `WebAss
 
 **The Game of Life**, also known simply as **Life**, is a cellular automaton devised by the British mathematician *John Horton Conway* in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the **Game of Life** by creating an initial configuration and observing how it evolves. It is *Turing complete* and can simulate a universal constructor or any other *Turing machine*.
 
+ - Visit a demo of the application [here](https://scottgriv.github.io/rust-wasm_game_of_life/).
+ 
 ---------------
 
 ## Table of Contents
@@ -40,7 +43,6 @@ A web-based implementation of **Conway's Game of Life** using `Rust` and `WebAss
 - [Getting Started](#getting-started)
     - [Dependencies](#dependencies)
     - [Installation](#installation)
-    - [Build](#build-optional)
     - [Usage](#usage)
 - [What's Inside?](#whats-inside)
 - [Resources](#resources)
@@ -87,52 +89,37 @@ git clone https://github.com/scottgriv/rust-wasm_game_of_life
 cd rust-wasm_game_of_life
 ```
 
-3. Set up the Web Server:
-```bash
-cd www
-http-server
-```
-
-### Build (Optional)
-
-The project includes the `www/pkg` build files, but if you would like to regenerate the package files, follow these steps:
-
-1. Change to the Directory:
-```bash
-cd rust-wasm_game_of_life
-```
-
-2. Add Cargo to PATH:
+3. Add Cargo to PATH:
 ```bash
 export PATH="$HOME/.cargo/bin:$PATH"
 ```
 
-3. Source the Shell Configuration:
+4. Source the Shell Configuration:
 ```bash
 source ~/.zshrc  
 ```
 
-4. Remove Existing `pkg` Directories:
+5. Remove Existing `pkg` Directories (if they exist):
 ```bash
 rm -rf pkg www/pkg
 ```
 
-5. Build the Project with `wasm-pack`:
+6. Build the Project package folder and files with `wasm-pack`:
 ```bash
 wasm-pack build --target web
 ```
 
-6. Move Generated `pkg` to `www`:
+7. Move Generated `pkg` folder to `www`:
 ```bash
 mv pkg www/
 ```
 
-7. Remove Auto-Generated Files for GitHub Pages (Optional):
+8. Remove optional Auto-Generated files (if you need them for your repository):
 ```bash
 rm www/pkg/README.md www/pkg/.gitignore
 ```
 
-8. Set up the Web Server:
+9. Set up the Web Server:
 ```bash
 cd www
 http-server
@@ -146,7 +133,7 @@ http://localhost:8080
 ```
 
 <div align="center">
-    <a href="https://bun.sh/" target="_blank">
+    <a href="https://scottgriv.github.io/rust-wasm_game_of_life/" target="_blank">
         <img src="./docs/images/demo.gif" style="width: 50%;"/>
     </a>
     <br>
