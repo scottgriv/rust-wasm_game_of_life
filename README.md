@@ -132,9 +132,7 @@ mv pkg www/
 rm www/pkg/README.md www/pkg/.gitignore
 ```
 
-8. Update the Auto-Generated `package.json` file in the `www/pkg` directory to include GitHub Pages.
-
-9. Set up the Web Server:
+8. Set up the Web Server:
 ```bash
 cd www
 http-server
