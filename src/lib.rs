@@ -1,4 +1,5 @@
 use wasm_bindgen::prelude::*;
+mod dummy;
 
 #[wasm_bindgen]
 pub struct Universe {
