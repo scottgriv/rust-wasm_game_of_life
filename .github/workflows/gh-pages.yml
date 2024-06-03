@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -12,31 +12,10 @@ permissions:
   id-token: write
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Setup Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          target: wasm32-unknown-unknown
-          override: true
-
-      - name: Install wasm-pack
-        run: |
-          curl https://rustwasm.github.io/wasm-pack/installer.sh -sSf | sh
-
-      - name: Build with wasm-pack
-        run: |
-          cd rust-wasm_game_of_life
-          wasm-pack build --target web
-          mv pkg www/
-
-      - name: Remove unnecessary files
-        run: |
-          rm www/pkg/README.md www/pkg/.gitignore
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
