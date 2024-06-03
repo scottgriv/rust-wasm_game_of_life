@@ -163,7 +163,6 @@ rust-wasm_game_of_life/ # Root directory
 │   └── workflows/ # GitHub Actions folder
 │       └── gh-pages.yml # GitHub Pages workflow
 ├── src/ # Source code
-│   ├── dummy.rs # Rust test code
 │   └── lib.rs # Rust code for the game logic
 ├── www/ # Web assets
 │   ├── index.html # HTML file
