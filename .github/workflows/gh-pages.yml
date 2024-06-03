@@ -24,9 +24,11 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: www
 
       - name: Build
         run: npm run build
+        working-directory: www
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -34,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: www  # Specify your build output directory
+          path: www
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
