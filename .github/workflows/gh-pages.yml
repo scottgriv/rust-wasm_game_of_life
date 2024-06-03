@@ -1,5 +1,4 @@
-# in .github/workflows/continuous_deployment.yml
-name: Continuous deployment
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -28,12 +27,18 @@ jobs:
         run: |
           curl https://rustwasm.github.io/wasm-pack/installer.sh -sSf | sh
           echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.cargo/bin:$PATH"
+
+      - name: Verify wasm-pack installation
+        run: wasm-pack --version
 
       - name: Build WASM
         run: |
-          cd www
+          cd rust-wasm_game_of_life
+          export PATH="$HOME/.cargo/bin:$PATH"
+          rm -rf pkg www/pkg
           wasm-pack build --target web
-          mv pkg ../www/
+          mv pkg www/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

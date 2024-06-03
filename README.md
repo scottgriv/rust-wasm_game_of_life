@@ -127,7 +127,7 @@ wasm-pack build --target web
 mv pkg www/
 ```
 
-7. Remove Auto-Generated Files for GitHub Pages:
+7. Remove Auto-Generated Files for GitHub Pages (Optional):
 ```bash
 rm www/pkg/README.md www/pkg/.gitignore
 ```
