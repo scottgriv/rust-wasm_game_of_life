@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Replace the meta tags with your information (optional) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Implementation of Conway's Game of Life using Rust and WebAssembly, with real-time visualization in the browser.">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <!-- OG info -->
+    <meta property="og:title" content="Conway's Game of Life ">
+    <meta property="og:description" content="Implementation of Conway's Game of Life using Rust and WebAssembly, with real-time visualization in the browser.">
+    <meta property="og:image" content="favicon/icon.png">
+    <meta property="og:type" content="website">
+    <!-- X info -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@scottgrivner">
+    <meta name="twitter:title" content="Conway's Game of Life">
+    <meta name="twitter:description" content="Implementation of Conway's Game of Life using Rust and WebAssembly, with real-time visualization in the browser.">
+    <meta name="twitter:image" content="favicon/icon.png">
+    <!-- manifest info -->
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+    <!-- Website Title --> 
+    <title>Conway's Game of Life</title>
+</head>
+<body>
+    <pre id="game-of-life"></pre>
+    <script type="module">
+        import init, { Universe } from "./pkg/rust_wasm_game_of_life.js";
+        async function run() {
+            await init();
+            const universe = Universe.new();
+            const pre = document.getElementById('game-of-life');
+
+            const renderLoop = () => {
+                pre.textContent = universe.render();
+                universe.tick();
+                requestAnimationFrame(renderLoop);
+            };
+
+            renderLoop();
+        }
+        run();
+    </script>
+</body>
+</html>
