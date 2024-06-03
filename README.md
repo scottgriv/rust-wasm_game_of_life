@@ -21,7 +21,7 @@
 <h1 align="center">Conway's Game of Life</h1>
 <div align="center">
     <a href="https://bun.sh/" target="_blank">
-        <img src="./docs/images/banner.png" style="width: 25%;"/>
+        <img src="./docs/images/banner.png" style="width: 50%;"/>
     </a>
     <br>
     <i>Rust teams up with WebAssembly.</i>
@@ -106,7 +106,7 @@ http://localhost:8080
 
 <div align="center">
     <a href="https://bun.sh/" target="_blank">
-        <img src="./docs/images/demo.gif" style="width: 25%;"/>
+        <img src="./docs/images/demo.gif" style="width: 50%;"/>
     </a>
     <br>
     <i>Web output, cellular automaton in a zero-player game.</i>
