@@ -54,9 +54,11 @@ Thumbs.db
 Icon?
 
 # OS generated files
-
 .DS_Store?
 *.DS_Store
 *.code-workspace
 /Cargo.lock
 /target/
+
+# Explicitly include the pkg directory
+!/www/pkg

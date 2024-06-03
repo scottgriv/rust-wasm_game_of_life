@@ -16,18 +16,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '18'
 
-      - name: Install Dependencies
-        run: npm install
-        working-directory: www/pkg
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-unknown-unknown
+          default: true
 
       - name: Build
-        run: npm run build
+        run: |
+          npm install
+          npm run build
         working-directory: www/pkg
 
       - name: Setup Pages
@@ -36,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: www
+          path: www  # Adjust if necessary
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

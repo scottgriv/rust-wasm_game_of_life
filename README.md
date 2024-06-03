@@ -40,6 +40,7 @@ A web-based implementation of **Conway's Game of Life** using `Rust` and `WebAss
 - [Getting Started](#getting-started)
     - [Dependencies](#dependencies)
     - [Installation](#installation)
+    - [Build](#build-optional)
     - [Usage](#usage)
 - [What's Inside?](#whats-inside)
 - [Resources](#resources)
@@ -86,12 +87,54 @@ git clone https://github.com/scottgriv/rust-wasm_game_of_life
 cd rust-wasm_game_of_life
 ```
 
-3. Build the Project:
+3. Set up the Web Server:
+```bash
+cd www
+http-server
+```
+
+### Build (Optional)
+
+The project includes the `www/pkg` build files, but if you would like to regenerate the package files, follow these steps:
+
+1. Change to the Directory:
+```bash
+cd rust-wasm_game_of_life
+```
+
+2. Add Cargo to PATH:
+```bash
+export PATH="$HOME/.cargo/bin:$PATH"
+```
+
+3. Source the Shell Configuration:
+```bash
+source ~/.zshrc  
+```
+
+4. Remove Existing `pkg` Directories:
+```bash
+rm -rf pkg www/pkg
+```
+
+5. Build the Project with `wasm-pack`:
 ```bash
 wasm-pack build --target web
 ```
 
-4. Set up the Web Server:
+6. Move Generated `pkg` to `www`:
+```bash
+mv pkg www/
+```
+
+7. Remove Auto-Generated Files for GitHub Pages:
+```bash
+rm www/pkg/README.md www/pkg/.gitignore
+```
+
+8. Update the Auto-Generated `package.json` file in the `www/pkg` directory to include GitHub Pages.
+
+9. Set up the Web Server:
 ```bash
 cd www
 http-server
